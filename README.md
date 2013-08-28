@@ -28,7 +28,7 @@ Electronics components used:
 - RFID READER ID-20: https://www.sparkfun.com/products/8628
 - RFID TAGS/BRACELETS/CHIPS: https://www.sparkfun.com/products/8310
 - LCD Screen:https://www.sparkfun.com/products/709
-- 
+
 //------------------------------
 PHP POSTING SCRIPT
 
