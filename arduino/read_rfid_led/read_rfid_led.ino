@@ -17,8 +17,9 @@ LiquidCrystal lcd(7, 6, 5, 4, 3, 2);
 byte serverAppsBond[] = {205,186,173,78}; //ip Address of the server you will connect to
 //The location to go to on the server
 //make sure to keep HTTP/1.0 at the end, this is telling it what type of file it is
+//replace http://myserver.com with your server.
 
-String locationPost = "http://www.appsbond.cl/powerade/tabs/test-rfid/post.php?rfid="; // POST 
+String locationPost = "http://myserver.com/post.php?rfid="; // POST 
 
 // if need to change the MAC address (Very Rare)
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
