@@ -4,7 +4,8 @@ Arduino-RFID-Facebook
 This is a set of files designed to be used as an Arduino + EthernetShield + RFID based facebook feeder.
 I used a series of steps in order to ensure propper pairing of users. 
 
-This repository has only the arduino and posting php files.
+This repository has only the arduino and posting php files. 
+The flash files used on the ipad app and the facebook app are not included.
 
 //------------------------------
 Steps
