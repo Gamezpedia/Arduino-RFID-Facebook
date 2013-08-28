@@ -7,6 +7,7 @@ I used a series of steps in order to ensure propper pairing of users.
 This repository has only the arduino and posting php files.
 I included the emailing script also.
 The flash files used on the ipad app and the facebook app are not included.
+the update.php file is used to pair the fbid and the rfid on the database.
 
 //------------------------------
 Steps
