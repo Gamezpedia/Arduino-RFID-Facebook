@@ -4,7 +4,8 @@ Arduino-RFID-Facebook
 This is a set of files designed to be used as an Arduino + EthernetShield + RFID based facebook feeder.
 I used a series of steps in order to ensure propper pairing of users. 
 
-This repository has only the arduino and posting php files. 
+This repository has only the arduino and posting php files.
+I included the emailing script also.
 The flash files used on the ipad app and the facebook app are not included.
 
 //------------------------------
@@ -27,6 +28,50 @@ Electronics components used:
 - RFID READER ID-20: https://www.sparkfun.com/products/8628
 - RFID TAGS/BRACELETS/CHIPS: https://www.sparkfun.com/products/8310
 - LCD Screen:https://www.sparkfun.com/products/709
+- 
+//------------------------------
+PHP POSTING SCRIPT
+
+<?php
+require_once "lib/facebook.php";
+require_once "lib/fbmain.php";
+//i have only two fbid's to test, mine and my cat-testUser
+$fbids = array("637008951", "100002463788678");
+
+$rfid = $_GET['rfid'];
+// and i have only two rfid tags to test.
+$rfid_one = "39008588AB9F";
+$rfid_two = "4D004B20FDDB";
+
+$indexof = -1;
+$fbid = "0";
+
+$attachment = array(
+	'message' => "TEST",
+ 	'name' => "TEST",
+ 	'link' => 'http://www.arduino.cc',
+ 	'description' => "123 Probando"
+ );
+
+
+if ($rfid == $rfid_one){
+	echo "<LUIS>";
+	$indexof = 0;
+}else if ($rfid == $rfid_two) {
+	echo "<NEKO>";
+	$indexof = 1;
+}else{
+	echo "<mismatch>";
+}
+
+$fbid = $fbids[$indexof];
+
+if (is_numeric($fbid)) {
+	$sendMessage = $facebook->api('/'. $fbid. '/feed/','post',$attachment);
+	echo "<ok>";
+}
+
+?>
 
 
 
