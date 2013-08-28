@@ -15,10 +15,9 @@ boolean reading = false;
 LiquidCrystal lcd(7, 6, 5, 4, 3, 2);
 
 byte serverAppsBond[] = {205,186,173,78}; //ip Address of the server you will connect to
-byte serverTheguaz[] = {66,33,222,231};
 //The location to go to on the server
 //make sure to keep HTTP/1.0 at the end, this is telling it what type of file it is
-String location = "/testarduino/post.php?rfid="; //NO POST
+
 String locationPost = "http://www.appsbond.cl/powerade/tabs/test-rfid/post.php?rfid="; // POST 
 
 // if need to change the MAC address (Very Rare)
