@@ -31,7 +31,7 @@ Electronics components used:
 
 //------------------------------
 PHP POSTING SCRIPT
-
+```
 <?php
 require_once "lib/facebook.php";
 require_once "lib/fbmain.php";
@@ -72,7 +72,7 @@ if (is_numeric($fbid)) {
 }
 
 ?>
-
+```
 
 
 
